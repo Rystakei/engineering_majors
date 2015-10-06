@@ -29,10 +29,21 @@ $gents: #4B77BE;
   stroke: $ladies;
 }
 
-.ct-label.ct-horizontal.ct-end {
-  font-weight: bold;
-  font-size: 18px;
+// .ct-label.ct-horizontal.ct-end {
+//   font-weight: bold;
+//   font-size: 12px;
+// }
+
+span.ct-label.ct-vertical {
+  font-size: 12px;
+  line-height: 1.5;
 }
+
+span.ct-label.ct-horizontal {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 
 
 body {
@@ -56,15 +67,6 @@ p,p b {
 }
 
 
-span.ct-label.ct-vertical {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-span.ct-label.ct-horizontal {
-  font-size: 16px;
-  line-height: 1.5;
-}
 
 .reference {
   margin-top: -30px;

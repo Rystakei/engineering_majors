@@ -130,6 +130,34 @@ function getGroupPercentages(degreesByGroup, degreeType) {
 var labels = ['All Graduates', 'Black', 'Native', 'Hispanic', 'White', 'Asian'];
 
 
+  var responsiveOptions = [
+    ['screen and (min-width: 641px) and (max-width: 1024px)', {
+      seriesBarDistance: 10,
+      axisX: {
+        labelInterpolationFnc: function (value) {
+          return value;
+        }
+      }
+    }],
+    ['screen and (max-width: 640px)', {
+      seriesBarDistance: 5,
+      axisX: {
+        labelInterpolationFnc: function (value) {
+          if (value == 'All Graduates') {
+            return 'All';
+          }
+          else if (value == 'Hispanic') {
+            return 'Hisp.';
+          }
+          else {
+            return value;            
+          }
+        }
+      }
+    }]
+  ];
+
+
   var allByGenderChart = new Chartist.Bar('.all-by-gender-chart', {
     labels: labels,
     series: [
@@ -149,7 +177,8 @@ var labels = ['All Graduates', 'Black', 'Native', 'Hispanic', 'White', 'Asian'];
       },
       scaleMinSpace: 15
     }
-  });
+  },
+  responsiveOptions);
 
 
   var CSByGenderChart = new Chartist.Bar('.cs-by-gender-chart', {
@@ -171,7 +200,8 @@ var labels = ['All Graduates', 'Black', 'Native', 'Hispanic', 'White', 'Asian'];
       },
       scaleMinSpace: 15
     }
-  });
+  },
+  responsiveOptions);
 
 
 }
