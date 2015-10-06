@@ -6,12 +6,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
 
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+
+$fontFamily: 'Montserrat';
+
 $ladies: #D24D57;
 $gents: #4B77BE;
 
 * {
   letter-spacing: 0.050em;
-  font-family: 'Maven Pro';
+  font-family: $fontFamily;
 }
 
 .ct-series-a .ct-bar,
@@ -39,14 +44,15 @@ input {
 }
 
 h1,h3,h4 {
-  font-family: 'Josefin Sans';
+  font-family: $fontFamily;
 }
 
 p,p b {
-  font-size: 24px;
-  letter-spacing: 0.040em;
-  line-height: 1.25;
-  font-family: 'Maven Pro';
+  font-size: 18px;
+  letter-spacing: 0.050em;
+  // line-height: 1.25;
+  line-height: 30px;
+  font-family: $fontFamily;
 }
 
 
@@ -60,6 +66,9 @@ span.ct-label.ct-horizontal {
   line-height: 1.5;
 }
 
+.reference {
+  margin-top: -30px;
+}
 
 .all-by-gender-chart, .cs-by-gender-chart {
   height: 400px;
@@ -90,7 +99,7 @@ span.ct-label.ct-horizontal {
 }
 
 h1.title {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 .header {
